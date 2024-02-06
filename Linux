@@ -1,0 +1,8 @@
+****************************
+Buscar latencia NAS ****
+nfsiostat 5 10 /tfcnas/tfc |tee -a "archivo_salida".txt
+nfsiostat 5 5 /ora02/app/oracle/product/fmw |tee -a /home/mdonoso/revision_estado_nas_`date +\%Y\%m\%d\%H\%M`.txt ; sleep 1; nfsiostat 5 5 /ora02/app/oracle/admin/shared |tee -a /home/mdonoso/revision_estado_nas_`date +\%Y\%m\%d\%H\%M`.txt; sleep 1 ; nfsiostat 5 5 /ora02/app/oracle/admin/logs |tee -a /home/mdonoso/revision_estado_nas_`date +\%Y\%m\%d\%H\%M`.txt
+
+****************************
+
+
